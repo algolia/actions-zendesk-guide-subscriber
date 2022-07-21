@@ -46,7 +46,7 @@ jobs:
       - id: slack-macro
         name: Notify updated macros Slack
         run: |
-          if [ -z "${{ steps.guide.outputs.macros }}" ]; then
+          if [ -z "${{ steps.macro.outputs.macros }}" ]; then
             echo "No update"
             exit 0
           fi
